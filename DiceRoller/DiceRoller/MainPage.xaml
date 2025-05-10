@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+                    <Image
+                        x:Name="DadoImage1"
+                        Source="dado1.png"
+                        HeightRequest="225"
+                    />
+                    <Picker
+                    x:Name="SelecaoPicker"
+                    Title="Escolha um lado do dado">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                            <x:String>Lado um</x:String>
+                            <x:String>Lado dois</x:String>
+                            <x:String>Lado tres</x:String>
+                            <x:String>Lado quatro</x:String>
+                            <x:String>Lado cinco</x:String>
+                            <x:String>Lado seis</x:String>                        
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>                    
+                <Button
+                x:Name="FlipButton"
+                Text="Jogue o dado"
+                Clicked="FlipButton_Clicked"
+                HorizontalOptions="Fill"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
